@@ -5,6 +5,8 @@ namespace Assignment04_BMICalculator
 {
   static class Program
   {
+    public static SplashForm splashForm;
+    public static BmiCalculatorForm bmiCalculatorForm;
     /// <summary>
     /// The main entry point for the application.
     /// </summary>
@@ -13,7 +15,9 @@ namespace Assignment04_BMICalculator
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new BmiCalculatorForm());;
+      splashForm=new SplashForm();
+      bmiCalculatorForm=new BmiCalculatorForm();
+      Application.Run(splashForm);
     }
   }
 }
