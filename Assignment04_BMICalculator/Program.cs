@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Assignment04_BMICalculator
@@ -16,7 +13,7 @@ namespace Assignment04_BMICalculator
     {
       Application.EnableVisualStyles();
       Application.SetCompatibleTextRenderingDefault(false);
-      Application.Run(new BMICalculatorForm());
+      Application.Run(new BmiCalculatorForm());;
     }
   }
 }
