@@ -32,19 +32,19 @@ namespace Assignment04_BMICalculator
     private void InitializeComponent()
     {
       this.BMITableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
-      this.WeightTextBox = new System.Windows.Forms.TextBox();
       this.MetricRadioButton = new System.Windows.Forms.RadioButton();
       this.HeightLabel = new System.Windows.Forms.Label();
       this.YourBmiLabel = new System.Windows.Forms.Label();
       this.CalculateBmiButton = new System.Windows.Forms.Button();
       this.ResetButton = new System.Windows.Forms.Button();
-      this.HeightTextBox = new System.Windows.Forms.TextBox();
       this.ImperialRadioButton = new System.Windows.Forms.RadioButton();
       this.WeightLabel = new System.Windows.Forms.Label();
       this.BMIResultProgressBar = new System.Windows.Forms.ProgressBar();
       this.Scale = new System.Windows.Forms.Label();
       this.BMITextBox = new System.Windows.Forms.TextBox();
       this.BmiResultTextBox = new System.Windows.Forms.TextBox();
+      this.WeightTextBox = new System.Windows.Forms.TextBox();
+      this.HeightTextBox = new System.Windows.Forms.TextBox();
       this.HeadLabel = new System.Windows.Forms.Label();
       this.BMITableLayoutPanel.SuspendLayout();
       this.SuspendLayout();
@@ -81,17 +81,6 @@ namespace Assignment04_BMICalculator
       this.BMITableLayoutPanel.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
       this.BMITableLayoutPanel.Size = new System.Drawing.Size(296, 345);
       this.BMITableLayoutPanel.TabIndex = 0;
-      // 
-      // WeightTextBox
-      // 
-      this.WeightTextBox.Location = new System.Drawing.Point(166, 109);
-      this.WeightTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-      this.WeightTextBox.Name = "WeightTextBox";
-      this.WeightTextBox.Size = new System.Drawing.Size(120, 53);
-      this.WeightTextBox.TabIndex = 10;
-      this.WeightTextBox.Click += new System.EventHandler(this.WeightTextBox_Click);
-      this.WeightTextBox.TextChanged += new System.EventHandler(this.WeightTextBox_TextChanged);
-      this.WeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeightTextBox_KeyPress);
       // 
       // MetricRadioButton
       // 
@@ -150,17 +139,6 @@ namespace Assignment04_BMICalculator
       this.ResetButton.UseVisualStyleBackColor = true;
       this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
       // 
-      // HeightTextBox
-      // 
-      this.HeightTextBox.Location = new System.Drawing.Point(166, 58);
-      this.HeightTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
-      this.HeightTextBox.Name = "HeightTextBox";
-      this.HeightTextBox.Size = new System.Drawing.Size(120, 53);
-      this.HeightTextBox.TabIndex = 9;
-      this.HeightTextBox.Click += new System.EventHandler(this.HeightTextBox_Click);
-      this.HeightTextBox.TextChanged += new System.EventHandler(this.HeightTextBox_TextChanged);
-      this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightTextBox_KeyPress);
-      // 
       // ImperialRadioButton
       // 
       this.ImperialRadioButton.AutoSize = true;
@@ -209,8 +187,9 @@ namespace Assignment04_BMICalculator
       // 
       this.BMITextBox.Location = new System.Drawing.Point(166, 215);
       this.BMITextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+      this.BMITextBox.Multiline = true;
       this.BMITextBox.Name = "BMITextBox";
-      this.BMITextBox.Size = new System.Drawing.Size(120, 53);
+      this.BMITextBox.Size = new System.Drawing.Size(120, 40);
       this.BMITextBox.TabIndex = 13;
       // 
       // BmiResultTextBox
@@ -221,6 +200,28 @@ namespace Assignment04_BMICalculator
       this.BmiResultTextBox.Name = "BmiResultTextBox";
       this.BmiResultTextBox.Size = new System.Drawing.Size(122, 49);
       this.BmiResultTextBox.TabIndex = 11;
+      // 
+      // WeightTextBox
+      // 
+      this.WeightTextBox.Location = new System.Drawing.Point(166, 109);
+      this.WeightTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+      this.WeightTextBox.Name = "WeightTextBox";
+      this.WeightTextBox.Size = new System.Drawing.Size(120, 53);
+      this.WeightTextBox.TabIndex = 10;
+      this.WeightTextBox.Click += new System.EventHandler(this.WeightTextBox_Click);
+      this.WeightTextBox.TextChanged += new System.EventHandler(this.WeightTextBox_TextChanged);
+      this.WeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.WeightTextBox_KeyPress);
+      // 
+      // HeightTextBox
+      // 
+      this.HeightTextBox.Location = new System.Drawing.Point(166, 58);
+      this.HeightTextBox.Margin = new System.Windows.Forms.Padding(8, 7, 8, 7);
+      this.HeightTextBox.Name = "HeightTextBox";
+      this.HeightTextBox.Size = new System.Drawing.Size(120, 53);
+      this.HeightTextBox.TabIndex = 9;
+      this.HeightTextBox.Click += new System.EventHandler(this.HeightTextBox_Click);
+      this.HeightTextBox.TextChanged += new System.EventHandler(this.HeightTextBox_TextChanged);
+      this.HeightTextBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightTextBox_KeyPress);
       // 
       // HeadLabel
       // 
@@ -246,7 +247,6 @@ namespace Assignment04_BMICalculator
       this.Name = "BmiCalculatorForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Body Mass Index Calculator";
-      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BMICalculatorForm_FormClosing);
       this.BMITableLayoutPanel.ResumeLayout(false);
       this.BMITableLayoutPanel.PerformLayout();
       this.ResumeLayout(false);
