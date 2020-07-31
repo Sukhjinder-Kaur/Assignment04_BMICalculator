@@ -247,6 +247,7 @@ namespace Assignment04_BMICalculator
       this.Name = "BmiCalculatorForm";
       this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
       this.Text = "Body Mass Index Calculator";
+      this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.BMICalculatorForm_FormClosing);
       this.BMITableLayoutPanel.ResumeLayout(false);
       this.BMITableLayoutPanel.PerformLayout();
       this.ResumeLayout(false);
